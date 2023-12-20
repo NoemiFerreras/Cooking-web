@@ -1,0 +1,255 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root{
+    --roboto-font: 'Roboto', sans-serif;
+    --playfair-display-font: 'Playfair Display', serif;
+    font: 300 1em var(--roboto-font)
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.logo{
+    width: 5%;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    font: normal 500 1em var(--roboto-font);
+}
+
+.banner{
+    width: 100%;
+}
+
+.banner__img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    display: flex;
+    height: 1050px;
+}
+
+.menu__left{
+    position: relative;
+    width: 65%;
+    height: 100%;
+}
+
+.menu__left--yellow{
+    position: absolute;
+    width: 95%;
+    height: 300px;
+    background-color: rgb(253, 223, 53);
+}
+
+.menu__left--img{
+    position: absolute;
+    width: 50%;
+    left: 5%;
+}
+
+.menu__left--img img{
+    width: 100%;
+}
+
+.menu__left--text{
+    position: absolute;
+    width: 30%;
+    left: 60%;
+    top: 7%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.menu__left--text h2{
+    font: bold 7vw var(--playfair-display-font)
+}
+
+
+.menu__left--text a{
+    color: orangered;
+    text-decoration: none;
+}
+
+.menu__left--text button{
+    color: white;
+    background-color: black;
+    padding: 20px 25px 20px 25px;
+    border: none;
+}
+
+.menu__right{
+    position: relative;
+    width: 35%;
+    top: 150px;
+}
+
+.menu__right--orange{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background-color: orangered;
+    top: 40px;
+}
+
+.menu__right--img{
+    position: absolute;
+    width: 90%;
+}
+
+.menu__right--img img{
+    width: 100%;
+}
+
+.aboutus{
+    position: relative;
+    width: 100%;
+    height: 425px;
+}
+
+.aboutus__background{
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+}
+
+.aboutus__left{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 40%;
+}
+
+.aboutus__left--img{
+    position: absolute;
+    width: 65%;
+    transform: rotate(-7deg);
+    translate: -55px;
+    z-index: 0;
+}
+
+.aboutus__left--img2{
+    position: absolute;
+    width: 65%;
+    z-index: 1;
+}
+
+.aboutus__left img{
+    width: 65%;
+}
+
+.aboutus__right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 40%;
+    left: 45%;
+    top: 20%;
+}
+
+.aboutus__right h3{
+    font: bold 3vw var(--playfair-display-font)
+}
+
+.aboutus__right button{
+    color: white;
+    background-color: black;
+    padding: 20px 25px 20px 25px;
+    border: none;
+}
+
+.learn{
+    background-image: url(../img/Learn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    gap: 15px;
+    width: 70%;
+}
+
+.text h3{
+    color: orangered;
+    font: bold 3vw var(--playfair-display-font)
+}
+.text p{
+    color: white;
+}
+
+.text a{
+    color: orangered;
+    text-decoration: none;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.box__div--left{
+    background-color: white;
+}
+
+.box__div--center{
+    background-color: black;
+    opacity: 0.5;
+}
+
+.box__div--right{
+    background-color: orangered;
+}
