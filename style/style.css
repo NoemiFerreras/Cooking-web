@@ -435,7 +435,7 @@ time, mark, audio, video {
     height: 400px;
 }
 
-.galeria{
+.gallery{
     padding-top: 100px;
     padding-bottom: 100px;
     width: 100%;
@@ -456,10 +456,262 @@ time, mark, audio, video {
     z-index: 1;
 }
 
-.photo{
-    width: 25%;
+.flip-card{
+    background-color: transparent;
+    width: 380px;
+    height: 380px;
+    /* La perspectiva hace efecto de revista */
+    /* perspective: 3000px; */
 }
 
-.photo img{
+.flip-card-inner{
+    position: relative;
     width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
+.photo--front, .photo--back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*Hay que poner las dos opciones de backface para que no haya problemas en ningún navegador*/
+    -webkit-backface-visibility: hidden; /*Para que se vea en navegadores Safari*/
+    backface-visibility: hidden; /*Para que se vea en todos los navegadores que no sean Safari*/
+}
+
+.photo--front img{
+    width: 100%;
+}
+
+
+.photo--back{
+    transform: rotateY(180deg);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+/* Estilo que se pone en caso de que la imagen no cargue, para que salga el ALT de la foto
+.flip-card-front{
+    background-color: #bbb;
+    color: black;
+} */
+
+.footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+}
+
+.footer__up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 120px
+}
+
+.footer__column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.footer__form{
+    width: 30%;
+}
+
+.footer__form ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.footer__form li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer__form input{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.50);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.footer__form input::placeholder{
+    color: white;
+    padding-left: 5px;
+}
+
+.footer__form textarea{
+    height: 40px;
+    width: 100%;
+    resize: none;
+}
+
+.footer__form textarea::placeholder{
+    color: white;
+    padding-left: 5px;
+}
+
+.footer__form button{
+    padding: 20px 30px 20px 30px;
+    background-color: var(--main-color-orange);
+    color: white;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+}
+
+.copyright{
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 600px){
+    .header{
+        height: 60px;
+    }
+
+    .logo{
+        width: 30%;
+    }
+    
+    .navbar{
+        display: none;
+    }
+
+    .menu{
+        height: 355px;
+    }
+
+    .menu__left--img{
+        width: 60%;
+        left: 0;
+    }
+
+    .menu__left--yellow{
+        height: 350px;
+    }
+
+    .menu__left--text{
+        width: 100%;
+        top: 0;
+        gap: 2px;
+    }
+
+    .menu__right{
+        display: none;
+    }
+
+    .text h3{
+        font-size: 7vw;
+    }
+
+    .text p{
+        display: none;
+    }
+
+    .box{
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .box__div--left{
+        width: 250px;
+        height: 300px;
+    }
+
+    .box__div--center{
+        width: 250px;
+        height: 300px;
+    }
+
+    .box__div--right{
+        width: 250px;
+        height: 300px;
+    }
+
+    .learn{
+        background-image: url("../img/Learn\ mobile.jpg");
+        background-position: center;
+        height: 1230px;
+    }
+
+    .aboutus{
+        height: 110px;
+    }
+
+    .aboutus__background{
+        height: 100%;
+    }
+
+    .aboutus__right{
+        gap: 0;
+    }
+
+    .aboutus__right p{
+        display: none;
+    }
+
+    .aboutus__right button{
+        padding: 10px 20px 10px 20px;
+    }
+
+    .carta h3{
+        font-size: 7vw;
+    }
+
+    .section__wok--img{
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .section__wok--text{
+        padding: 10px;
+        line-height: 15px;
+        top: 10px;
+        width: 200px;
+        height: 230px;
+        left: 160px;
+    }
+
+
+
+
+
+
+
+
 }
